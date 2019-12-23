@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+}
+
+.first-screen {
+    background: url(img/Rectangle.png);
+    width: 100%;
+    height: 900px;
+    align-content: center;
+}
+
+.first-screen_menu > ul > li > a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 39px 20px;
+}
+
+ul#menu {
+    margin: 0;
+    height: 59px;
+    align-items: center;
+    padding-top: 40px;
+    border-bottom: 1px solid #a1a1a1 ;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+a#current {
+    border-bottom: 2px solid #ffffff;
+}
+
+p {
+    text-align: center;
+    margin-top: 220px;
+    margin-bottom: 20px;
+}
+
+.motto {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    margin: 0;
+    padding: 0 26%;
+}
+
+.first-screen_button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.first-screen_button > button{
+    background: #4985ff;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 30px;
+    padding: 14px 36px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.services {
+    padding: 105px 21%;
+
+}
+
+.services > h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+    color: #323232;
+    padding: 0 10%;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.services > p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #999999;
+    margin: 0;
+    padding: 0 12%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.project {
+    display: flex;
+}
+
+.desc-project > h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin: 40px 0 12px 17px;
+}
+
+.project img {
+    float: left;
+    border: 1px solid #4985ff;
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding: 25px;
+    width: 50%;
+    height: 72%;
+}
+
+.desc-project > p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #999999;
+    margin: 0;
+}
