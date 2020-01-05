@@ -51,8 +51,8 @@ a#current {
     font-size: 48px;
     line-height: 64px;
     text-align: center;
-    margin: 0;
-    padding: 0 24%;
+    max-width: 830px;
+    margin: 0 auto;
 }
 
 .first-screen-button {
@@ -83,8 +83,8 @@ a#current {
     line-height: 53px;
     text-align: center;
     color: #323232;
-    padding: 0 30%;
-    margin-top: 0;
+    max-width: 740px;
+    margin: 0 auto;
     margin-bottom: 50px;
 }
 
@@ -94,8 +94,8 @@ a#current {
     line-height: 25px;
     text-align: center;
     color: #999999;
-    margin: 0;
-    padding: 0 31%;
+    max-width: 730px;
+    margin: 0 auto;
 }
 
 .projects {
@@ -107,8 +107,12 @@ a#current {
 
 .project {
     display: flex;
-    width: 290px;
+    width: 340px;
     margin: 0 15px;
+}
+
+.desc-project {
+    margin-left: 20px;
 }
 
 .desc-project > h3 {
@@ -116,14 +120,13 @@ a#current {
     font-size: 18px;
     line-height: 22px;
     color: #000000;
-    margin: 40px 0 12px 17px;
+    margin: 40px 0 12px 0;
 }
 
 .project img {
-
     width: 40px;
     height: 40px;
-    vertical-align: middle;
+    margin-top: 25px;
 }
 
 .desc-project > p {
@@ -135,27 +138,22 @@ a#current {
 }
 
 .ellipse-1 {
-    width: 65px;
-    height: 65px;
-    background-color: transparent;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    border-color: #4985ff;
+    width: 90px;
+    height: 90px;
+    border: 1px solid #4985ff;
+    border-radius: 50%;
+    box-sizing: border-box;
     text-align: center;
-    line-height: 65px;
+    margin: 9px;
 }
 
 .ellipse-2 {
-    width: 75px;
-    height: 75px;
-    background-color: transparent;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    border-color: #4985ff;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 1px solid #4985ff;
+    box-sizing: border-box;
     text-align: center;
-    line-height: 75px;
 }
 
 .about-us {
@@ -190,8 +188,9 @@ a#current {
 }
 
 .description > img {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
     box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
     border-radius: 30px;
     margin: 0 60px;
@@ -247,13 +246,13 @@ p.our-projects-text {
 .all-services {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
+    background: linear-gradient(180deg, #5F12D2 50%, white 50%); 
 }
 
 .all-services-header {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 70px;
 }
 
@@ -262,6 +261,7 @@ p.our-projects-text {
     font-size: 36px;
     line-height: 53px;
     color: #FFFFFF;
+    max-width: 540px;
 }
 
 .all-services-items {
@@ -277,7 +277,7 @@ p.our-projects-text {
     display: flex;
     flex-direction: column;
     width: 350px;
-    margin: 0 15px;
+    margin: 10px 15px 0 15px;
 }
 
 .all-services-item > img {
@@ -325,7 +325,8 @@ p.our-projects-text {
     line-height: 25px;
     text-align: center;
     color: #999999;
-    margin: 0 31%;
+    margin: 0 auto;
+    max-width: 730px;
 }
 
 .all-projects-items {
@@ -368,7 +369,6 @@ p.our-projects-text {
 
 .video-header {
     padding-top: 40px;
-    margin-bottom: 70px;
 }
 
 .video-header > h2 {
@@ -387,18 +387,28 @@ p.our-projects-text {
     color: #FFFFFF;
 }
 
-.video-2 {
-    position: relative;
+.video-block {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 970px;
+    max-width: 100%;
+    height: 430px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
     border-radius: 10px;
     text-align: center;
+    background-image: url(img/video-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(70px);
 }
+
 
 .watch-video {
     display: flex;
     flex-direction: row;
-    margin: -300px 0 0 34%;
+    margin: auto;
     padding: 20px 40px;
     width: 320px;
     border: 1px solid #FFFFFF;
@@ -464,7 +474,8 @@ p.our-projects-text {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    width: 490px; 
+    width: 100%;
+    max-width: 490px;
     border: none; 
     height: 45px; 
 
@@ -475,7 +486,7 @@ input[type="email"] {
     box-sizing: border-box;
     box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
     border-radius: 30px 0px 0px 30px;
-    width: 300px;
+    width: 60%;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -490,7 +501,7 @@ input[type="submit"] {
     box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
     border-radius: 0px 30px 30px 0px;
     border-left: none;
-    width: 190px;
+    width: 40%;
     height: 45px;
     font-family: Montserrat;
     font-style: normal;
