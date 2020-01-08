@@ -17,10 +17,27 @@ body {
     align-content: center;
 }
 
+.first-screen-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #a1a1a1 ;
+}
+
 .first-screen-menu > ul > li > a{
     color: #ffffff;
     text-decoration: none;
     padding: 39px 20px;
+}
+
+.wrapper {
+    display: none;
+}
+
+@media (max-width: 680px) {
+    .first-screen-menu > ul {display: none;}
+    .wrapper { display: inline-block; }
+    .first-screen-menu {border-bottom: none;}
 }
 
 ul#menu {
@@ -28,8 +45,6 @@ ul#menu {
     height: 59px;
     align-items: center;
     padding-top: 40px;
-    border-bottom: 1px solid #a1a1a1 ;
-    padding-left: 48%;
 }
 
 ul#menu li {
@@ -70,7 +85,13 @@ a#current {
     line-height: 20px;
     text-align: center;
     color: #ffffff;
+    outline: none;
 }
+
+.first-screen-button > button:hover {
+    cursor: pointer;
+}
+
 
 .services {
     margin-top: 110px;
@@ -151,7 +172,7 @@ a#current {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    border: 1px solid #4985ff;
+    border: 1px solid #E0E0E0;
     box-sizing: border-box;
     text-align: center;
 }
@@ -359,6 +380,9 @@ p.our-projects-text {
     color: #ffffff;
 }
 
+.all-projects-button > button:hover{
+    cursor: pointer;
+}   
 .video {
     background: url(img/video.png) no-repeat;
     background-position: center;
@@ -414,6 +438,10 @@ p.our-projects-text {
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 200px;
+}
+
+.watch-video:hover {
+    cursor: pointer;
 }
 
 .watch-video > img {
@@ -494,6 +522,7 @@ input[type="email"] {
     line-height: 21px;
     color: #999999;
     padding-left: 33px;
+    outline: none;
 }
 
 input[type="submit"] {
@@ -510,7 +539,12 @@ input[type="submit"] {
     line-height: 20px;
     text-align: center;
     color: #FFFFFF;
+    outline: none;
 }
+
+input[type="submit"] {
+    cursor: pointer;
+}    
 
 hr {
     width: 58%;
@@ -612,7 +646,97 @@ footer > hr {
     text-decoration: none;
 }
 
+/* Menu */
 
+.wrapper{
+    margin: 0 auto;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    color: white;
+    text-align: center;
+    height: 40px;
+}
 
+#check-menu{
+    display: none;
+}
 
+label{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 40px;
+}
+
+.burger-line{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s all;
+}
+
+.second, .third{
+    top: 18px;
+}
+
+.fourth{
+    top: 28px;
+}
+
+.main-menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+.main-menu > a{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,.3);
+    background-color: #000;
+}
+
+.main-menu > a:hover{
+    background-color: rgba(0,0,0,.9);
+}
+
+#check-menu:checked ~ .main-menu{
+    max-height: 500px;
+    font-size: 16px;
+}
+
+#check-menu:checked ~ .first{
+    display: none;
+}
+
+#check-menu:checked ~ .second{
+    transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third{
+    transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth{
+    display: none;
+}
 
